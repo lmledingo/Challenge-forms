@@ -1,0 +1,22 @@
+<div>
+  <label>
+    Username :
+    <input type="text" [formControl]="username" />
+
+    email
+    <input type="email" [formControl]="email" />
+
+    password
+    <input type="password" [formControl]="password" />
+
+    adress
+    <input type="text" [formControl]="adress" />
+    <button type="submit" (click)="user()">Inscription</button>
+  </label>
+</div>
+<div *ngIf="isSubmit">
+<p>{{username.value}}</p>
+<p>{{email.value}}</p>
+<p>{{password.value}}</p>
+<p>{{adress.value}}</p>
+</div>
